@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model RumahSakitWeb.Models.Dokter
+
+@{
+    ViewData["Title"] = "Ubah Data Dokter";
+}
+
+<div>
+    <span class="h2">Ubah Data Dokter</span>
+ <a class="btn btn-primary float-end" asp-action="index">Kembali</a>
+</div>
+
+<div class="row">
+    <div class="">
+        <form asp-action="Ubah">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="mt-3 form-group">
+                <label asp-for="Nama" class="control-label"></label>
+                <input asp-for="Nama" class="form-control" />
+                <span asp-validation-for="Nama" class="text-danger"></span>
+            </div>
+            <div class="mt-3 form-group">
+                <label asp-for="Spesialis" class="control-label"></label>
+                <input asp-for="Spesialis" class="form-control" />
+                <span asp-validation-for="Spesialis" class="text-danger"></span>
+            </div>
+            <div class="mt-3 form-group">
+                <label asp-for="Alamat" class="control-label"></label>
+                <input asp-for="Alamat" class="form-control" />
+                <span asp-validation-for="Alamat" class="text-danger"></span>
+            </div>
+            <div class="mt-3 form-group">
+                <label asp-for="NoIzin" class="control-label"></label>
+                <input asp-for="NoIzin" class="form-control" />
+                <span asp-validation-for="NoIzin" class="text-danger"></span>
+            </div>
+       
+            <div class="mt-3form-group row">
+                <input type="submit" value="Simpan" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

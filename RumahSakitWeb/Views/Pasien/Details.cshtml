@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model RumahSakitWeb.Models.Pasien
+
+@{
+    ViewData["Title"] = "Detail Data Pasien";
+}
+
+<h2>Detail Data Pasien</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nama)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nama)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Alamat)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Alamat)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NoTelp)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NoTelp)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TglLahir)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TglLahir)
+            </dd>
+        </dl>
+    </div>
+
+</div>
+    
+

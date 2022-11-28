@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model IEnumerable<RumahSakitWeb.Models.Dokter>
+
+@{
+    ViewData["Title"] = "Master Dokter";
+}
+
+<h2>Master Dokter</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Tambah">Create New</a>
+</p>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Nama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spesialis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alamat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoIzin)
+            </th>
+            <th>
+                Aksi
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Nama
+                    @*@Html.DisplayFor(modelItem => item.Nama)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Spesialis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Alamat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoIzin)
+                </td>
+                <td>
+                    <a asp-action="Ubah" class="btn btn-warning" asp-route-id="@item.ID">Edit</a> 
+                    <a asp-action="Hapus" class="btn btn-danger" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+                
