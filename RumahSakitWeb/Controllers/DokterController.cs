@@ -50,7 +50,19 @@ namespace RumahSakitWeb.Controllers
         //edit data dokter
         public IActionResult Ubah(int id)
         {
+            //if id not found
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
             Dokter dokter = _db.ParaDokter.Find(id);
+            if (dokter == null)
+            {
+                return NotFound();
+            }
+            
+
             return View(dokter);
         }
 

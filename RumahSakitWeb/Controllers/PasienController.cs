@@ -39,7 +39,15 @@ namespace RumahSakitWeb.Controllers
         //edit data pasien
         public IActionResult Ubah(int id)
         {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
             Pasien pasien = _db.ParaPasien.Find(id);
+            if (pasien == null)
+            {
+                return NotFound();
+            }
             return View(pasien);
         }
 
