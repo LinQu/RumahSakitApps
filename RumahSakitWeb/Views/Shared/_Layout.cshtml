@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RumahSakitWeb.styles.css" asp-append-version="true" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 <body>
     <header>
@@ -52,5 +55,19 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        @if(TempData["Message"] != null)
+        {
+            <text>
+                Swal.fire({
+                    icon: 'success',
+                    title: '@TempData["Message"]',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </text>
+        }
+        
+    </script>
 </body>
 </html>

@@ -82,7 +82,15 @@ namespace RumahSakitWeb.Controllers
         //hapus data dokter
         public async Task<IActionResult> Hapus(int id)
         {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
             Dokter dokter = _db.ParaDokter.Find(id);
+            if (dokter == null)
+            {
+                return NotFound();
+            }
             _db.ParaDokter.Remove(dokter);
             _db.SaveChanges();
             //set route to DokterController

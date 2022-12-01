@@ -56,11 +56,39 @@
                 </td>
                 <td>
                     <a asp-action="Ubah" class="btn btn-warning" asp-route-id="@item.ID">Edit</a> 
-                    <a asp-action="Hapus" class="btn btn-danger" asp-route-id="@item.ID">Delete</a>
+                    @*modal delete*@
+                    <a  class="btn btn-danger btn-delete" data-id="@item.ID" >Delete</a>
+                    
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+@*modal hapus data*@
+@using (Html.BeginForm("Hapus", "Dokter", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal fade bs-example-modal-sm" id="modalHapus"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Hapus Data</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Apakah anda yakin akan menghapus data ini?</p>
+                    <input type="hidden" name="id" class="id" id="idHapus" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
 
                 

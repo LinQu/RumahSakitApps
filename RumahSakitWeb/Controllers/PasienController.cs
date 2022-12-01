@@ -66,7 +66,17 @@ namespace RumahSakitWeb.Controllers
         //hapus data pasien
         public async Task<IActionResult> Hapus(int id)
         {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
             Pasien pasien = _db.ParaPasien.Find(id);
+            if (pasien == null)
+            {
+                return NotFound();
+            }
+
+            TempData["Message"] = "Data berhasil dihapus";
             _db.ParaPasien.Remove(pasien);
             _db.SaveChanges();
             return RedirectToAction("Index");
