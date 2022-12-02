@@ -56,12 +56,12 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script>
-        @if(TempData["Message"] != null)
+        @if(TempData["Notifikasi"] != null)
         {
             <text>
                 Swal.fire({
                     icon: 'success',
-                    title: '@TempData["Message"]',
+                    title: '@TempData["Notifikasi"]',
                     showConfirmButton: false,
                     timer: 1500
                 })

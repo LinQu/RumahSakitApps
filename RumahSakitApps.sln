@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RumahSakitWeb", "RumahSakitWeb\RumahSakitWeb.csproj", "{0618D4DC-BA42-4CCB-9451-F7D9AA8BA24A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RumahSakitWeb", "RumahSakitWeb\RumahSakitWeb.csproj", "{0618D4DC-BA42-4CCB-9451-F7D9AA8BA24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RumahSakitApi", "RumahSakitApi\RumahSakitApi.csproj", "{8E5601BB-758D-47AA-9DC6-FD6CC4145ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0618D4DC-BA42-4CCB-9451-F7D9AA8BA24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0618D4DC-BA42-4CCB-9451-F7D9AA8BA24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0618D4DC-BA42-4CCB-9451-F7D9AA8BA24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5601BB-758D-47AA-9DC6-FD6CC4145ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5601BB-758D-47AA-9DC6-FD6CC4145ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5601BB-758D-47AA-9DC6-FD6CC4145ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5601BB-758D-47AA-9DC6-FD6CC4145ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
